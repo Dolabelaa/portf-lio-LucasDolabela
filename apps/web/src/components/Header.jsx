@@ -77,12 +77,11 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform shadow-md shadow-primary/20">
-              <span className="text-white font-bold text-xl">Logo</span>
-            </div>
-            <span className="text-xl font-bold text-foreground hidden sm:block">
-              Nome<span className="text-primary">.</span>
+          <Link to="/" className="flex items-center group relative">
+            <span className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <span className="relative flex items-center gap-2 px-2 py-1">
+              <span className="text-primary font-mono text-base leading-none">&lt;/&gt;</span>
+              <span className="text-xl font-bold text-foreground tracking-tight">Lucas Dolabela</span>
             </span>
           </Link>
 

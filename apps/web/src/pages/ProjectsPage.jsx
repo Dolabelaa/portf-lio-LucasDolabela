@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { useLanguage } from '@/context/LanguageContext.jsx';
+import gagroCover from '@/components/image/g-agro-cover.jpg';
 
 const ProjectsPage = () => {
   const { t } = useLanguage();
@@ -19,24 +20,62 @@ const ProjectsPage = () => {
     'from-indigo-500 to-purple-500',
   ];
 
+  const featuredRepos = ['g-agro', 'n8n-challenge', 'xubank', 'jogo-adivinhacao'];
+
+  const repoMeta = {
+    'g-agro': {
+      technologies: ['JavaScript', 'Java', 'CSS', 'React'],
+      description: t('projects.items.p1.description'),
+      homepage: 'https://g-agro.vercel.app',
+      cover: gagroCover,
+    },
+    'n8n-challenge': {
+      technologies: ['TypeScript', 'Node.js', 'Docker', 'PostgreSQL'],
+      description: t('projects.items.p2.description'),
+      homepage: null,
+      cover: null,
+    },
+    'xubank': {
+      technologies: ['Java', 'JUnit', 'OOP'],
+      description: t('projects.items.p3.description'),
+      homepage: null,
+      cover: null,
+    },
+    'jogo-adivinhacao': {
+      technologies: ['Java'],
+      description: t('projects.items.p4.description'),
+      homepage: null,
+      cover: null,
+    },
+  };
+
   useEffect(() => {
     const fetchGithubProjects = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/AntunesMarcos/repos?sort=updated&per_page=10');
+        const response = await fetch('https://api.github.com/users/Dolabelaa/repos?sort=updated&per_page=50');
         const data = await response.json();
 
         if (Array.isArray(data)) {
-          const formattedProjects = data.map((repo, index) => ({
-            id: repo.id,
-            title: repo.name.replace(/-/g, ' ').toUpperCase(),
-            description: repo.description || (t('projects.noDescription') || 'Sem descrição disponível.'),
-            date: new Date(repo.created_at).toLocaleDateString('pt-BR', { year: 'numeric', month: 'short' }),
-            technologies: repo.language ? [repo.language] : ['Geral'],
-            color: cardColors[index % cardColors.length],
-            githubUrl: repo.html_url,
-            homepage: repo.homepage 
-          }));
-          setProjects(formattedProjects);
+          const filtered = featuredRepos
+            .map((name, index) => {
+              const repo = data.find(r => r.name === name);
+              if (!repo) return null;
+              const meta = repoMeta[name];
+              return {
+                id: repo.id,
+                title: repo.name.replace(/-/g, ' '),
+                description: meta.description || repo.description || 'Sem descrição disponível.',
+                date: new Date(repo.created_at).toLocaleDateString('pt-BR', { year: 'numeric', month: 'short' }),
+                technologies: meta.technologies,
+                color: cardColors[index % cardColors.length],
+                githubUrl: repo.html_url,
+                homepage: meta.homepage || repo.homepage,
+                cover: meta.cover || null,
+              };
+            })
+            .filter(Boolean);
+
+          setProjects(filtered);
         }
       } catch (error) {
         console.error("Erro ao carregar projetos do GitHub:", error);
@@ -105,6 +144,15 @@ const ProjectsPage = () => {
                         {/* Project Card */}
                         <div className="md:ml-20 bg-card border border-border rounded-2xl overflow-hidden hover:border-primary transition-all group shadow-sm hover:shadow-xl">
                           <div className={`h-2 bg-gradient-to-r ${project.color}`}></div>
+                          {project.cover && (
+                            <div className="w-full h-52 overflow-hidden">
+                              <img
+                                src={project.cover}
+                                alt={`${project.title} cover`}
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                              />
+                            </div>
+                          )}
                           <div className="p-8">
                             {/* Date Badge */}
                             <div className="flex items-center space-x-2 mb-4">

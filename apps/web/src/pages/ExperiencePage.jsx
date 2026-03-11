@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Briefcase, GraduationCap, Code, Users } from 'lucide-react';
+import { Briefcase, GraduationCap, Code } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { useLanguage } from '@/context/LanguageContext.jsx';
@@ -40,7 +40,7 @@ const ExperiencePage = () => {
       company: t('experience.items.e2.company'),
       duration: t('experience.items.e2.duration'),
       description: t('experience.items.e2.description'),
-      icon: Code,
+      icon: GraduationCap,
       color: 'from-emerald-500 to-teal-500',
       highlights: t('experience.items.e2.highlights'),
     },
@@ -50,19 +50,9 @@ const ExperiencePage = () => {
       company: t('experience.items.e3.company'),
       duration: t('experience.items.e3.duration'),
       description: t('experience.items.e3.description'),
-      icon: GraduationCap,
+      icon: Code,
       color: 'from-purple-500 to-pink-500',
       highlights: t('experience.items.e3.highlights'),
-    },
-    {
-      id: 4,
-      role: t('experience.items.e4.role'),
-      company: t('experience.items.e4.company'),
-      duration: t('experience.items.e4.duration'),
-      description: t('experience.items.e4.description'),
-      icon: Users,
-      color: 'from-orange-500 to-red-500',
-      highlights: t('experience.items.e4.highlights'),
     },
   ];
 

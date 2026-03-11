@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin, Github, Twitter, Mail, Code2, Heart, ArrowUpRight } from 'lucide-react';
+import { Linkedin, Github, Mail, Code2, Heart, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext.jsx';
 
 const Footer = () => {
@@ -8,10 +8,9 @@ const Footer = () => {
   const { t } = useLanguage();
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub', color: 'hover:bg-gray-700' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: 'hover:bg-blue-600' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter', color: 'hover:bg-sky-500' },
-    { icon: Mail, href: 'mailto:ninguem@exemplo.com', label: 'Email', color: 'hover:bg-primary' },
+    { icon: Github, href: 'https://github.com/Dolabelaa', label: 'GitHub', color: 'hover:bg-gray-700' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/lucas-dolabela/', label: 'LinkedIn', color: 'hover:bg-blue-600' },
+    { icon: Mail, href: 'mailto:dolabela.dev@gmail.com', label: 'Email', color: 'hover:bg-primary' },
   ];
 
   const quickLinks = [
@@ -56,7 +55,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
                 <Code2 className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-foreground tracking-tight">Nome<span className="text-primary">.</span></span>
+              <span className="text-xl font-bold text-foreground tracking-tight">Lucas Dolabela<span className="text-primary">.</span></span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               {t('footer.subtitle')}
@@ -116,21 +115,21 @@ const Footer = () => {
             </div>
             <div className="space-y-2">
               <a
-                href="mailto:ninguem@exemplo.com"
+                href="mailto:dolabela.dev@gmail.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary text-sm transition-colors group"
               >
                 <Mail className="w-4 h-4" />
-                <span>ninguem@exemplo.com</span>
+                <span>dolabela.dev@gmail.com</span>
                 <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Dolabelaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary text-sm transition-colors group"
               >
                 <Github className="w-4 h-4" />
-                <span>github.com/nome</span>
+                <span>github.com/Dolabelaa</span>
                 <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             </div>
@@ -140,12 +139,10 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-muted-foreground text-xs flex items-center gap-1.5">
-            © {currentYear} Nome.
+            © {currentYear} Lucas Gonçalves Dolabela.
             <span className="text-muted-foreground/60">{t('footer.rights')}</span>
           </p>
-          <p className="text-muted-foreground/60 text-xs flex items-center gap-1">
-            Feito com <Heart className="w-3 h-3 text-primary fill-primary mx-0.5" /> em React
-          </p>
+          
         </div>
       </div>
     </footer>

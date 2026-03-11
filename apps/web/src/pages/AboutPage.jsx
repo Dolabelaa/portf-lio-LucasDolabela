@@ -1,25 +1,24 @@
-import React from 'react';
+  import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Code2, Database, Palette, Server, Smartphone, Globe } from 'lucide-react';
+import { Code2, Database, Server, Globe, Container } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { useLanguage } from '@/context/LanguageContext.jsx';
-import fotoPerfil from '@/components/image/Eu.png';
+import fotoPerfil from "@/components/image/Eu.jpeg";
 
 const AboutPage = () => {
   const { t } = useLanguage();
 
   const skills = [
     { name: 'React', icon: Code2, color: 'text-cyan-400' },
-    { name: 'JavaScript', icon: Code2, color: 'text-yellow-400' },
-    { name: 'Python', icon: Code2, color: 'text-blue-400' },
-    { name: 'TypeScript', icon: Code2, color: 'text-blue-500' },
-    { name: 'TailwindCSS', icon: Palette, color: 'text-cyan-500' },
     { name: 'Node.js', icon: Server, color: 'text-green-500' },
-    { name: 'MySQL', icon: Database, color: 'text-green-600' },
+    { name: 'JavaScript', icon: Code2, color: 'text-yellow-400' },
     { name: 'REST APIs', icon: Globe, color: 'text-purple-400' },
-    { name: 'Responsive Design', icon: Smartphone, color: 'text-pink-400' },
+    { name: 'MySQL', icon: Database, color: 'text-green-600' },
+    { name: 'Docker', icon: Container, color: 'text-blue-400' },
+    { name: 'C', icon: Code2, color: 'text-blue-600' },
+    { name: 'Java', icon: Code2, color: 'text-orange-500' },
   ];
 
   const education = [
@@ -65,7 +64,7 @@ const AboutPage = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex justify-center lg:justify-end"
+                className="flex justify-center lg:justify-end pb-6"
               >
                 <motion.div
                   className="relative group"
@@ -96,7 +95,7 @@ const AboutPage = () => {
                   {/* Photo */}
                   <motion.img
                     src={fotoPerfil}
-                    alt="Vinícius Zegarra Palhares - Professional portrait"
+                    alt="Lucas Gonçalves Dolabela - Professional portrait"
                     className="relative rounded-2xl w-full max-w-md h-auto object-cover shadow-2xl"
                     variants={{
                       rest: { scale: 1, filter: 'brightness(1)' },
@@ -114,6 +113,14 @@ const AboutPage = () => {
                     }}
                     transition={{ duration: 0.3 }}
                   />
+
+                  {/* Badge */}
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap z-20">
+                    <div className="flex items-center gap-2 bg-card border border-border shadow-lg rounded-full px-4 py-2">
+                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      <span className="text-sm font-medium text-foreground">Intern @ TSA Engenharia</span>
+                    </div>
+                  </div>
                 </motion.div>
               </motion.div>
 
@@ -177,44 +184,110 @@ const AboutPage = () => {
               </div>
             </motion.div>
 
-            {/* Education Section */}
+            {/* Dual Timeline Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="mb-20"
             >
-              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-                {t('about.educationTitle')}
+              <h2 className="text-3xl font-bold text-foreground mb-10 text-center">
+                {t('about.timelineTitle')}
               </h2>
-              <div className="max-w-3xl mx-auto">
-                {education.map((edu, index) => (
-                  <div
-                    key={index}
-                    className="bg-card border border-border rounded-2xl p-8 hover:border-primary transition-all"
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold text-xl">🎓</span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-foreground mb-2">
-                          {edu.degree}
-                        </h3>
-                        <p className="text-primary font-semibold mb-2">
-                          {edu.institution}
-                        </p>
-                        <p className="text-muted-foreground mb-3">
-                          {edu.period}
-                        </p>
-                        <p className="text-foreground leading-relaxed">
-                          {edu.description}
-                        </p>
-                      </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+                {/* Professional Timeline */}
+                <div>
+                  <h3 className="text-lg font-semibold text-primary mb-6 flex items-center gap-2">
+                    <span className="w-7 h-7 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center text-sm">💼</span>
+                    {t('about.timelineProfessional')}
+                  </h3>
+                  <div className="relative">
+                    <div className="absolute left-5 top-2 bottom-2 w-0.5 bg-gradient-to-b from-primary to-primary/10" />
+                    <div className="space-y-5">
+                      {[
+                        { role: 'Estagiário de Engenharia de Software', place: 'TSA Engenharia', period: '2025 - Presente', current: true },
+                      ].map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: i * 0.07 }}
+                          className="flex items-start gap-4"
+                        >
+                          <div className="relative z-10 flex-shrink-0 mt-1">
+                            <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center ${
+                              item.current ? 'bg-primary border-primary shadow-md shadow-primary/40' : 'bg-card border-border'
+                            }`}>
+                              {item.current
+                                ? <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" />
+                                : <span className="w-2.5 h-2.5 rounded-full bg-muted-foreground/40" />}
+                            </div>
+                          </div>
+                          <div className={`flex-1 rounded-xl border p-4 transition-colors ${
+                            item.current ? 'bg-primary/10 border-primary/40' : 'bg-card border-border hover:border-primary/40'
+                          }`}>
+                            <p className="font-semibold text-foreground text-sm">{item.role}</p>
+                            <p className={`text-sm font-medium mt-0.5 ${item.current ? 'text-primary' : 'text-muted-foreground'}`}>{item.place}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{item.period}</p>
+                          </div>
+                        </motion.div>
+                      ))}
                     </div>
                   </div>
-                ))}
+                </div>
+
+                {/* Education Timeline */}
+                <div>
+                  <h3 className="text-lg font-semibold text-secondary mb-6 flex items-center gap-2">
+                    <span className="w-7 h-7 rounded-lg bg-secondary/10 border border-secondary/30 flex items-center justify-center text-sm">🎓</span>
+                    {t('about.timelineEducation')}
+                  </h3>
+                  <div className="relative">
+                    <div className="absolute left-5 top-2 bottom-2 w-0.5 bg-gradient-to-b from-secondary to-secondary/10" />
+                    <div className="space-y-5">
+                      {[
+                        { role: 'Bacharelado em Engenharia de Software', place: 'PUC Minas', period: '2024 - 2027', current: true, color: 'secondary' },
+                        { role: 'Ensino Médio Técnico', place: 'SESI', period: '2020 - 2023', current: false },
+                        { role: 'Técnico em Eletrotécnica', place: 'Senai', period: '2020 - 2022', current: false },
+                        { role: 'Inglês — Certificação B2 Michigan', place: 'Fisk', period: '2015 - 2022', current: false },
+                        { role: 'Ensino Fundamental', place: 'Colégio Santa Maria Minas', period: '2010 - 2019', current: false },
+                      ].map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, x: 20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: i * 0.07 }}
+                          className="flex items-start gap-4"
+                        >
+                          <div className="relative z-10 flex-shrink-0 mt-1">
+                            <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center ${
+                              item.current ? 'bg-secondary border-secondary shadow-md shadow-secondary/40' : 'bg-card border-border'
+                            }`}>
+                              {item.current
+                                ? <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" />
+                                : <span className="w-2.5 h-2.5 rounded-full bg-muted-foreground/40" />}
+                            </div>
+                          </div>
+                          <div className={`flex-1 rounded-xl border p-4 transition-colors ${
+                            item.current ? 'bg-secondary/10 border-secondary/40' : 'bg-card border-border hover:border-secondary/40'
+                          }`}>
+                            <p className="font-semibold text-foreground text-sm">{item.role}</p>
+                            <p className={`text-sm font-medium mt-0.5 ${item.current ? 'text-secondary' : 'text-muted-foreground'}`}>{item.place}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{item.period}</p>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </motion.div>
+
           </div>
         </main>
 

@@ -123,7 +123,7 @@ const HomePage = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
-                  className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
+                  className="text-lg sm:text-xl text-foreground/75 max-w-2xl mx-auto leading-relaxed"
                 >
                   {t('home.description')}
                 </motion.p>
@@ -166,7 +166,7 @@ const HomePage = () => {
             className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
           >
             <div className="flex flex-col items-center space-y-2">
-              <span className="text-xs text-gray-400 tracking-widest uppercase">{t('home.scroll')}</span>
+              <span className="text-xs text-foreground/50 tracking-widest uppercase">{t('home.scroll')}</span>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}

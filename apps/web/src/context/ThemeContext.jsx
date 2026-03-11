@@ -82,7 +82,7 @@ export const themes = {
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('portfolioTheme') || 'dark';
+    return localStorage.getItem('portfolioTheme') || 'purple';
   });
 
   useEffect(() => {

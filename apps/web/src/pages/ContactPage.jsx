@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Twitter, Send, CheckCircle } from 'lucide-react';
+import { Mail, Linkedin, Github, Send, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -30,25 +30,19 @@ const ContactPage = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/lucas-dolabela/',
       color: 'hover:text-blue-500',
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com',
-      color: 'hover:text-gray-400',
-    },
-    {
-      name: 'Twitter',
-      icon: Twitter,
-      href: 'https://twitter.com',
-      color: 'hover:text-sky-500',
+      href: 'https://github.com/Dolabelaa',
+      color: 'hover:text-foreground',
     },
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:zegarravdev@gmail.com',
+      href: 'mailto:dolabela.dev@gmail.com',
       color: 'hover:text-red-500',
     },
   ];

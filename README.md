@@ -105,21 +105,21 @@ O projeto segue uma arquitetura simples baseada em aplicação Front-end moderna
 
 Antes de executar o projeto, certifique-se de possuir instalado:
 
-* Node.js (versão 18 ou superior)
+* Node.js (versão 20 ou superior)
 * npm
 
 ### 📦 Instalação de Dependências
 
 1. Clone o repositório:
 ```bash
-git clone <https://github.com/AntunesMarcos/Portifolio/edit/main/README.md>
+git clone https://github.com/AntunesMarcos/Portifolio.git
 
 ```
 
 
 2. Entre na pasta do projeto:
 ```bash
-cd vitrine-digital
+cd Portifolio
 
 ```
 
@@ -141,7 +141,7 @@ npm run dev
 ```
 
 
-2. A aplicação estará disponível em: `http://localhost:5173`
+2. A aplicação estará disponível em: `http://localhost:3000`
 
 ---
 
