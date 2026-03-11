@@ -13,3 +13,5 @@ apps/web/dist/
 
 # Vercel local cache
 .vercel/
+.vercel
+.env*.local
