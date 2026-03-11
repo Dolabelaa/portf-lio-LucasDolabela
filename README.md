@@ -15,28 +15,29 @@ O objetivo do projeto é demonstrar boas práticas de desenvolvimento Front-end,
 
 ## 📚 Índice
 
-* [Links Úteis](https://www.google.com/search?q=%23-links-%C3%BAteis)
-* [Sobre o Projeto](https://www.google.com/search?q=%23-sobre-o-projeto)
-* [Funcionalidades Principais](https://www.google.com/search?q=%23-funcionalidades-principais)
-* [Tecnologias Utilizadas](https://www.google.com/search?q=%23-tecnologias-utilizadas)
-* [Arquitetura](https://www.google.com/search?q=%23-arquitetura)
-* [Instalação e Execução](https://www.google.com/search?q=%23-instala%C3%A7%C3%A3o-e-execu%C3%A7%C3%A3o)
-* [Deploy](https://www.google.com/search?q=%23-deploy)
-* [Estrutura de Pastas](https://www.google.com/search?q=%23-estrutura-de-pastas)
-* [Demonstração](https://www.google.com/search?q=%23-demonstra%C3%A7%C3%A3o)
-* [Testes](https://www.google.com/search?q=%23-testes)
-* [Documentações Utilizadas](https://www.google.com/search?q=%23-documenta%C3%A7%C3%B5es-utilizadas)
-* [Autores](https://www.google.com/search?q=%23-autores)
-* [Contribuição](https://www.google.com/search?q=%23-contribui%C3%A7%C3%A3o)
-* [Agradecimentos](https://www.google.com/search?q=%23-agradecimentos)
-* [Licença](https://www.google.com/search?q=%23-licen%C3%A7a)
+* [Links Úteis](#-links-úteis)
+* [Sobre o Projeto](#-sobre-o-projeto)
+* [Funcionalidades Principais](#-funcionalidades-principais)
+* [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+* [Arquitetura](#-arquitetura)
+* [Instalação e Execução](#️-instalação-e-execução)
+* [Configuração do EmailJS](#-configuração-do-formulário-de-contato-emailjs)
+* [Deploy](#-deploy)
+* [Estrutura de Pastas](#-estrutura-de-pastas)
+* [Demonstração](#-demonstração)
+* [Testes](#-testes)
+* [Documentações Utilizadas](#-documentações-utilizadas)
+* [Autores](#-autores)
+* [Contribuição](#-contribuição)
+* [Agradecimentos](#-agradecimentos)
+* [Licença](#-licença)
 
 ---
 
 ## 🔗 Links Úteis
 
-* **Demo Online:** [Link para acesso à aplicação web em ambiente de produção]
-* **Documentação:** [Link para a documentação técnica do projeto]
+* **Repositório:** [Portfólio Lucas Dolabela](https://github.com/Dolabelaa/portf-lio-LucasDolabela)
+* **Aplicação local (dev):** `http://localhost:3000`
 
 ---
 
@@ -76,10 +77,11 @@ O sistema permite que o usuário apresente:
 
 ### Front-end
 
-* **Framework/Biblioteca:** JavaScript (ES6+)
+* **Framework/Biblioteca:** React + JavaScript (ES6+)
 * **Build Tool:** Vite
 * **Estilização:** TailwindCSS
 * **Animações:** Framer Motion
+* **Envio de e-mail:** EmailJS (`@emailjs/browser`)
 * **Gerenciamento de dependências:** npm
 
 ---
@@ -112,14 +114,14 @@ Antes de executar o projeto, certifique-se de possuir instalado:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/AntunesMarcos/Portifolio.git
+git clone https://github.com/Dolabelaa/portf-lio-LucasDolabela.git
 
 ```
 
 
 2. Entre na pasta do projeto:
 ```bash
-cd Portifolio
+cd portf-lio-LucasDolabela
 
 ```
 
@@ -128,6 +130,11 @@ cd Portifolio
 ```bash
 npm install
 
+```
+
+> Caso precise instalar manualmente o pacote de envio de e-mails, execute:
+```bash
+npm install @emailjs/browser
 ```
 
 
@@ -142,6 +149,35 @@ npm run dev
 
 
 2. A aplicação estará disponível em: `http://localhost:3000`
+
+### Execução apenas do front-end (opcional)
+
+Se quiser rodar somente a aplicação web sem comandos do monorepo:
+
+```bash
+cd apps/web
+npm install
+npm run dev
+```
+
+---
+
+## 📨 Configuração do formulário de contato (EmailJS)
+
+O formulário da página de contato usa o pacote `@emailjs/browser` e lê as chaves em `apps/web/src/config/emailJsConfig.js`.
+
+1. Crie o arquivo `apps/web/.env` com as variáveis:
+
+```env
+VITE_EMAILJS_SERVICE_ID=seu_service_id
+VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_para_voce
+VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_para_cliente
+VITE_EMAILJS_PUBLIC_KEY=sua_public_key
+```
+
+2. Reinicie o servidor (`npm run dev`) após criar/alterar o `.env`.
+
+> O arquivo `.env` está no `.gitignore` e não deve ser versionado.
 
 ---
 
@@ -201,10 +237,11 @@ O projeto pode ser expandido com testes utilizando ferramentas como:
 
 ## 📚 Documentações Utilizadas
 
-* [Documentação do Vite](https://www.google.com/search?q=https://vitejs.dev/)
-* [Documentação do TailwindCSS](https://www.google.com/search?q=https://tailwindcss.com/docs)
-* [Documentação do Framer Motion](https://www.google.com/search?q=https://www.framer.com/motion/)
-* [Documentação JavaScript (MDN)](https://www.google.com/search?q=https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+* [Documentação do Vite](https://vitejs.dev/)
+* [Documentação do TailwindCSS](https://tailwindcss.com/docs)
+* [Documentação do Framer Motion](https://www.framer.com/motion/)
+* [Documentação do EmailJS](https://www.emailjs.com/docs/)
+* [Documentação JavaScript (MDN)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 ---
 
