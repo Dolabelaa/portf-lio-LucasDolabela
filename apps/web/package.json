@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "vite --port 3000",
-    "build": "node tools/prebuild.js && vite build --outDir ../../dist/apps/web",
-    "start": "vite preview --outDir ../../dist/apps/web --port 3000",
+    "build": "node tools/prebuild.js && vite build",
+    "start": "vite preview --port 3000",
     "lint": "eslint . --quiet",
     "lint:warn": "eslint ."
   },
