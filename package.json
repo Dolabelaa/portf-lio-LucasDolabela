@@ -1,0 +1,17 @@
+{
+	"name": "monorepo",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "npm run dev --prefix apps/web",
+		"build": "npm run build --prefix apps/web",
+		"lint": "npm run lint --prefix apps/web"
+	},
+	"workspaces": [
+		"apps/*"
+	],
+	"dependencies": {
+		"@emailjs/browser": "^4.4.1",
+		"framer-motion": "^12.35.0"
+	}
+}

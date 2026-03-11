@@ -1,0 +1,312 @@
+{
+  "en-US": {
+    "header": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "experience": "Experience",
+      "contact": "Contact",
+      "menu": "Menu"
+    },
+    "footer": {
+      "subtitle": "Software Engineering student at PUC Minas. Building backends, automating solutions, and turning ideas into working code.",
+      "quickLinks": "Quick Links",
+      "connect": "Connect",
+      "rights": "All rights reserved."
+    },
+    "home": {
+      "metaTitle": "Lucas Gonçalves Dolabela - Software Engineer & Student",
+      "metaDesc": "Portfolio of Lucas Gonçalves Dolabela, a Software Engineering student at PUC Minas focused on backend development, data analysis, and building innovative solutions.",
+      "badge": "Welcome to my portfolio",
+      "title": "Lucas Gonçalves Dolabela",
+      "subtitle": "Software Engineer & Student",
+      "description": "Software Engineering student at PUC Minas with hands-on experience in backend development, REST APIs, and system design. Currently at TSA Engenharia developing management systems. Driven by a problem-solving mindset and a passion for writing clean, efficient code.",
+      "viewProjects": "View My Projects",
+      "getInTouch": "Get In Touch",
+      "scroll": "Scroll to explore"
+    },
+    "about": {
+      "metaTitle": "About - Lucas Dolabela",
+      "metaDesc": "Learn more about Lucas Gonçalves Dolabela, a Software Engineering student at PUC Minas and intern at TSA Engenharia, passionate about backend development and innovative solutions.",
+      "title": "About Me",
+      "subtitle": "Get to know more about my journey, skills, and passion for technology",
+      "hello": "Hello, I'm Lucas Dolabela",
+      "p1": "Software Engineering student at PUC Minas, focused on backend development, data analysis, and process modeling. I'm driven by a hands-on mindset and a constant pursuit of efficient and innovative solutions.",
+      "p2": "Currently at TSA Engenharia, I work on management system development. I use agile methodologies and AI tools strategically to optimize code writing, ensuring productivity and technical scale in deliveries.",
+      "p3": "My journey includes the award for best interdisciplinary project of the semester at PUC Minas. I also have advanced English with a B2 Michigan certification, facilitating collaboration in global environments.",
+      "skillsTitle": "Technical Skills",
+      "timelineTitle": "My Journey",
+      "timelineProfessional": "Professional",
+      "timelineEducation": "Education",
+      "educationTitle": "Education",
+      "edu1": {
+        "degree": "Bachelor of Software Engineering",
+        "institution": "Pontificia Universidade Catolica de Minas Gerais",
+        "period": "2024 - Present",
+        "description": "Studying software architecture, algorithms, data structures, and modern development practices. Engaged in interdisciplinary projects with real-world impact, including an award-winning project recognized as the best of the semester."
+      }
+    },
+    "projects": {
+      "metaTitle": "Projects - Lucas Dolabela",
+      "metaDesc": "Explore the portfolio of Lucas Gonçalves Dolabela, showcasing real-world projects in Java, TypeScript, React, Docker, and more.",
+      "title": "My Projects",
+      "subtitle": "A collection of projects showcasing my skills and passion for development",
+      "viewProject": "View Project",
+      "sourceCode": "Source Code",
+      "items": {
+        "p1": {
+          "title": "G-AGRO",
+          "description": "Award-winning interdisciplinary project at PUC Minas. A full-stack web platform for agricultural management, developed collaboratively by a team of students. Live at g-agro.vercel.app.",
+          "date": "2025",
+          "technologies": ["JavaScript", "Java", "CSS", "React"]
+        },
+        "p2": {
+          "title": "n8n Challenge",
+          "description": "Custom n8n node to generate true random numbers using the Random.org API. Built with TypeScript and containerized with Docker and PostgreSQL. Includes unit tests and error handling. Developed as a technical challenge for an internship at Onfly.",
+          "date": "2025",
+          "technologies": ["TypeScript", "Node.js", "Docker", "PostgreSQL"]
+        },
+        "p3": {
+          "title": "Xubank",
+          "description": "Modular banking system built in Java for the Modular Programming course at PUC Minas. Simulates a digital bank with client management, multiple account types, transactions, reports, and a login authentication system.",
+          "date": "2025",
+          "technologies": ["Java", "JUnit", "OOP"]
+        },
+        "p4": {
+          "title": "Jogo de Adivinhação",
+          "description": "Number guessing game in Java where the player tries to guess a randomly generated number between 0 and 100. The game provides feedback at each attempt, indicating whether the guess was too high or too low.",
+          "date": "2024",
+          "technologies": ["Java"]
+        }
+      }
+    },
+    "experience": {
+      "metaTitle": "Experience - Lucas Dolabela",
+      "metaDesc": "Professional experience and academic journey of Lucas Gonçalves Dolabela, including internship at TSA Engenharia and award-winning projects.",
+      "title": "Experience",
+      "subtitle": "My professional journey and academic contributions",
+      "highlights": "Key Highlights:",
+      "items": {
+        "e1": {
+          "role": "Software Engineering Intern",
+          "company": "TSA Engenharia",
+          "duration": "2025 - Present",
+          "description": "Working on the development and maintenance of internal management systems. Collaborating with agile teams to deliver scalable backend solutions, leveraging AI tools strategically to improve code quality and delivery speed.",
+          "highlights": [
+            "Development of management systems used in daily operations",
+            "Applied agile methodologies in a real-world enterprise environment",
+            "Used AI tools to optimize code writing and boost productivity"
+          ]
+        },
+        "e2": {
+          "role": "Best Interdisciplinary Project - G-AGRO",
+          "company": "PUC Minas",
+          "duration": "2025",
+          "description": "Led the development of G-AGRO, a full-stack web platform for agricultural management built collaboratively with a team of students. The project was awarded best interdisciplinary project of the semester by the institution.",
+          "highlights": [
+            "Awarded best interdisciplinary project of the semester at PUC Minas",
+            "Full-stack platform deployed and accessible at g-agro.vercel.app",
+            "Built with JavaScript, React, Java, and CSS in a collaborative team"
+          ]
+        },
+        "e3": {
+          "role": "Individual Academic Projects",
+          "company": "PUC Minas",
+          "duration": "2024 - Present",
+          "description": "Developed multiple individual projects throughout the Software Engineering program, applying concepts of OOP, modular programming, data structures, and system design in practical, real-world scenarios.",
+          "highlights": [
+            "Xubank: modular banking system in Java with JUnit tests",
+            "Jogo de Adivinhação: number guessing game in Java",
+            "n8n Challenge: custom automation node with TypeScript and Docker"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "metaTitle": "Contact - Lucas Dolabela",
+      "metaDesc": "Get in touch with Lucas Dolabela. Send a message or connect through social media.",
+      "title": "Get In Touch",
+      "subtitle": "Have a question or want to work together? I'd love to hear from you!",
+      "formTitle": "Send a Message",
+      "nameLabel": "Name *",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "your.email@example.com",
+      "messageLabel": "Message *",
+      "messagePlaceholder": "Your message...",
+      "sending": "Sending...",
+      "send": "Send Message",
+      "connectTitle": "Connect With Me",
+      "collabTitle": "Let's Collaborate",
+      "collabP1": "If you have a question or just want to say hi, feel free to reach out!",
+      "collabP2": "I typically respond within 24-48 hours. Looking forward to connecting with you!",
+      "errors": {
+        "nameReq": "Name is required",
+        "emailReq": "Email is required",
+        "emailInv": "Please enter a valid email address",
+        "msgReq": "Message is required",
+        "valTitle": "Validation Error",
+        "valDesc": "Please fill in all required fields correctly."
+      },
+      "success": {
+        "title": "Message Sent Successfully!",
+        "desc": "Thank you for reaching out. I'll get back to you soon."
+      }
+    }
+  },
+  "pt-BR": {
+    "header": {
+      "home": "Início",
+      "about": "Sobre",
+      "projects": "Projetos",
+      "experience": "Experiência",
+      "contact": "Contato",
+      "menu": "Menu"
+    },
+    "footer": {
+      "subtitle": "Estudante de Engenharia de Software na PUC Minas. Desenvolvendo backends, automatizando soluções e transformando ideias em código.",
+      "quickLinks": "Links Rápidos",
+      "connect": "Conectar",
+      "rights": "Todos os direitos reservados."
+    },
+    "home": {
+      "metaTitle": "Lucas Gonçalves Dolabela - Engenheiro de Software & Estudante",
+      "metaDesc": "Portfólio de Lucas Gonçalves Dolabela, estudante de Engenharia de Software na PUC Minas, focado em desenvolvimento backend, análise de dados e construção de soluções inovadoras.",
+      "badge": "Bem-vindo ao meu portfólio",
+      "title": "Lucas Gonçalves Dolabela",
+      "subtitle": "Engenheiro de Software & Estudante",
+      "description": "Estudante de Engenharia de Software na PUC Minas com experiência prática em desenvolvimento backend, REST APIs e modelagem de sistemas. Atualmente na TSA Engenharia, desenvolvendo sistemas de gestão. Movido por uma mentalidade orientada a soluções e pela busca constante por código limpo e eficiente.",
+      "viewProjects": "Ver Meus Projetos",
+      "getInTouch": "Entrar em Contato",
+      "scroll": "Role para explorar"
+    },
+    "about": {
+      "metaTitle": "Sobre - Lucas Dolabela",
+      "metaDesc": "Saiba mais sobre Lucas Gonçalves Dolabela, estudante de Engenharia de Software na PUC Minas e estagiário na TSA Engenharia, apaixonado por desenvolvimento backend e soluções inovadoras.",
+      "title": "Sobre Mim",
+      "subtitle": "Conheça mais sobre minha jornada, habilidades e paixão por tecnologia",
+      "hello": "Olá, Sou o Lucas Dolabela",
+      "p1": "Estudante de Engenharia de Software na PUC Minas, focado em desenvolvimento backend, análise de dados e modelagem de processos. Sou movido por uma mentalidade \"mão na massa\" e pela busca constante por soluções eficientes e inovadoras.",
+      "p2": "Atualmente na TSA Engenharia, atuo no desenvolvimento de sistemas de gestão. Utilizo metodologias ágeis e ferramentas de IA de forma estratégica para otimizar a escrita de código, garantindo produtividade e escala técnica nas entregas.",
+      "p3": "Minha trajetória inclui o prêmio de melhor projeto interdisciplinar do semestre na PUC Minas. Além disso, possuo inglês avançado com certificação B2 Michigan, facilitando a colaboração em ambientes globais.",
+      "skillsTitle": "Habilidades Técnicas",
+      "timelineTitle": "Minha Trajetória",
+      "timelineProfessional": "Profissional",
+      "timelineEducation": "Educação",
+      "educationTitle": "Educação",
+      "edu1": {
+        "degree": "Bacharelado em Engenharia de Software",
+        "institution": "Pontifícia Universidade Católica de Minas Gerais",
+        "period": "2024 - Presente",
+        "description": "Formação em arquitetura de software, algoritmos, estruturas de dados e práticas modernas de desenvolvimento. Participação ativa em projetos interdisciplinares com impacto real, incluindo projeto premiado como melhor do semestre pela instituição."
+      }
+    },
+    "projects": {
+      "metaTitle": "Projetos - Lucas Dolabela",
+      "metaDesc": "Explore o portfólio de Lucas Gonçalves Dolabela, com projetos reais em Java, TypeScript, React, Docker e muito mais.",
+      "title": "Meus Projetos",
+      "subtitle": "Uma coleção de projetos que demonstram minhas habilidades e paixão por desenvolvimento",
+      "viewProject": "Ver Projeto",
+      "sourceCode": "Código Fonte",
+      "items": {
+        "p1": {
+          "title": "G-AGRO",
+          "description": "Projeto interdisciplinar premiado como melhor do semestre na PUC Minas. Plataforma web full-stack para gestão agrícola, desenvolvida de forma colaborativa por uma equipe de estudantes. Disponível em g-agro.vercel.app.",
+          "date": "2025",
+          "technologies": ["JavaScript", "Java", "CSS", "React"]
+        },
+        "p2": {
+          "title": "n8n Challenge",
+          "description": "Conector customizado para o n8n que gera números aleatórios verdadeiros usando a API do Random.org. Desenvolvido com TypeScript, containerizado com Docker e PostgreSQL. Inclui testes unitários e tratamento de erros. Criado como desafio técnico para estágio na Onfly.",
+          "date": "2025",
+          "technologies": ["TypeScript", "Node.js", "Docker", "PostgreSQL"]
+        },
+        "p3": {
+          "title": "Xubank",
+          "description": "Sistema bancário modular desenvolvido em Java para a disciplina de Programação Modular na PUC Minas. Simula um banco digital com gerenciamento de clientes, tipos variados de conta, transações, relatórios e autenticação de login.",
+          "date": "2025",
+          "technologies": ["Java", "JUnit", "POO"]
+        },
+        "p4": {
+          "title": "Jogo de Adivinhação",
+          "description": "Jogo de adivinhação de números em Java onde o jogador tenta descobrir um número aleatório gerado entre 0 e 100. O jogo oferece feedback a cada tentativa, indicando se o palpite foi muito alto ou muito baixo.",
+          "date": "2024",
+          "technologies": ["Java"]
+        }
+      }
+    },
+    "experience": {
+      "metaTitle": "Experiência - Lucas Dolabela",
+      "metaDesc": "Experiência profissional e jornada acadêmica de Lucas Gonçalves Dolabela, incluindo estágio na TSA Engenharia e projetos premiados.",
+      "title": "Experiência",
+      "subtitle": "Minha jornada profissional e contribuições acadêmicas",
+      "highlights": "Principais Destaques:",
+      "items": {
+        "e1": {
+          "role": "Estagiário de Engenharia de Software",
+          "company": "TSA Engenharia",
+          "duration": "2025 - Presente",
+          "description": "Atuo no desenvolvimento e manutenção de sistemas de gestão internos. Colaboro com equipes ágeis para entregar soluções backend escaláveis, utilizando ferramentas de IA de forma estratégica para melhorar a qualidade do código e a velocidade das entregas.",
+          "highlights": [
+            "Desenvolvimento de sistemas de gestão utilizados nas operações diárias",
+            "Aplicação de metodologias ágeis em um ambiente corporativo real",
+            "Uso de ferramentas de IA para otimizar a escrita de código e aumentar a produtividade"
+          ]
+        },
+        "e2": {
+          "role": "Melhor Projeto Interdisciplinar - G-AGRO",
+          "company": "PUC Minas",
+          "duration": "2025",
+          "description": "Participei do desenvolvimento do G-AGRO, uma plataforma web full-stack para gestão agrícola construída em equipe. O projeto foi premiado como o melhor projeto interdisciplinar do semestre pela instituição.",
+          "highlights": [
+            "Premiado como melhor projeto interdisciplinar do semestre na PUC Minas",
+            "Plataforma full-stack publicada e acessível em g-agro.vercel.app",
+            "Desenvolvido com JavaScript, React, Java e CSS em equipe colaborativa"
+          ]
+        },
+        "e3": {
+          "role": "Projetos Acadêmicos Individuais",
+          "company": "PUC Minas",
+          "duration": "2024 - Presente",
+          "description": "Desenvolvi diversos projetos individuais ao longo do curso de Engenharia de Software, aplicando conceitos de POO, programação modular, estruturas de dados e design de sistemas em cenários práticos.",
+          "highlights": [
+            "Xubank: sistema bancário modular em Java com testes JUnit",
+            "Jogo de Adivinhação: jogo em Java de adivinhação de números",
+            "n8n Challenge: nó de automação customizado com TypeScript e Docker"
+          ]
+        }
+      }
+    },
+    "contact": {
+      "metaTitle": "Contato - Lucas Dolabela",
+      "metaDesc": "Entre em contato com Lucas Dolabela. Envie uma mensagem ou conecte-se através das redes sociais.",
+      "title": "Entrar em Contato",
+      "subtitle": "Tem alguma dúvida ou quer trabalhar junto? Eu adoraria ouvir de você!",
+      "formTitle": "Enviar uma Mensagem",
+      "nameLabel": "Nome *",
+      "namePlaceholder": "Seu nome",
+      "emailLabel": "E-mail *",
+      "emailPlaceholder": "seu.email@exemplo.com",
+      "messageLabel": "Mensagem *",
+      "messagePlaceholder": "Sua mensagem...",
+      "sending": "Enviando...",
+      "send": "Enviar Mensagem",
+      "connectTitle": "Conecte-se Comigo",
+      "collabTitle": "Vamos Colaborar",
+      "collabP1": " Se você tem uma pergunta ou apenas quer dizer oi, sinta-se à vontade para entrar em contato!",
+      "collabP2": "Normalmente respondo dentro de 24-48 horas. Ansioso para me conectar com você!",
+      "errors": {
+        "nameReq": "Nome é obrigatório",
+        "emailReq": "E-mail é obrigatório",
+        "emailInv": "Por favor, insira um endereço de e-mail válido",
+        "msgReq": "Mensagem é obrigatória",
+        "valTitle": "Erro de Validação",
+        "valDesc": "Por favor, preencha todos os campos obrigatórios corretamente."
+      },
+      "success": {
+        "title": "Mensagem Enviada com Sucesso!",
+        "desc": "Obrigado por entrar em contato. Retornarei em breve."
+      }
+    }
+  }
+}
