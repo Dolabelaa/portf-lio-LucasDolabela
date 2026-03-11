@@ -37,7 +37,7 @@ O objetivo do projeto é demonstrar boas práticas de desenvolvimento Front-end,
 ## 🔗 Links Úteis
 
 * **Repositório:** [Portfólio Lucas Dolabela](https://github.com/Dolabelaa/portf-lio-LucasDolabela)
-* **Deploy (Vercel):** [https://portf-lio-lucas-dolabela-web-ixlp.vercel.app](https://portf-lio-lucas-dolabela-web-ixlp.vercel.app/contact)
+* **Deploy (Vercel):** https://portf-lio-lucas-dolabela-web-ixlp.vercel.app/
 * **Aplicação local (dev):** `http://localhost:3000`
 
 ---
