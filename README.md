@@ -37,6 +37,7 @@ O objetivo do projeto é demonstrar boas práticas de desenvolvimento Front-end,
 ## 🔗 Links Úteis
 
 * **Repositório:** [Portfólio Lucas Dolabela](https://github.com/Dolabelaa/portf-lio-LucasDolabela)
+* **Deploy (Vercel):** [https://portf-lio-lucas-dolabela-web-ixlp.vercel.app](https://portf-lio-lucas-dolabela-web-ixlp.vercel.app/contact)
 * **Aplicação local (dev):** `http://localhost:3000`
 
 ---
@@ -183,14 +184,18 @@ VITE_EMAILJS_PUBLIC_KEY=sua_public_key
 
 ## 🚀 Deploy
 
-Para gerar a versão de produção:
+A aplicação está publicada na **Vercel** e pode ser acessada em:
+
+🔗 [https://portf-lio-lucas-dolabela-web-ixlp.vercel.app](https://portf-lio-lucas-dolabela-web-ixlp.vercel.app/contact)
+
+Para gerar a versão de produção localmente:
 
 ```bash
 npm run build
 
 ```
 
-Os arquivos finais serão gerados na pasta: `dist/`
+Os arquivos finais serão gerados na pasta: `apps/web/dist/`
 
 ---
 
