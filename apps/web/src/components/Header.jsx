@@ -140,7 +140,7 @@ const Header = () => {
                 <div className="flex flex-col space-y-4 mt-8">
                   <div className="flex items-center space-x-2 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">VZ</span>
+                      <span className="text-white font-bold text-xl">LD</span>
                     </div>
                     <span className="text-lg font-bold text-foreground">{t('header.menu')}</span>
                   </div>
