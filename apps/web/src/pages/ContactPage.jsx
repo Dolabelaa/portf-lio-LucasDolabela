@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Send, CheckCircle } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -12,6 +12,7 @@ import Footer from '@/components/Footer.jsx';
 import { useLanguage } from '@/context/LanguageContext.jsx';
 import emailjs from '@emailjs/browser';
 import EMAILJS_CONFIG from '@/config/emailJsConfig.js';
+import { getMissingEmailJsConfig } from '@/config/emailJsConfig.js';
 
 
 const ContactPage = () => {
@@ -86,6 +87,14 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
+
+    const missingConfig = getMissingEmailJsConfig();
+    if (missingConfig.length > 0) {
+      console.error('Config EmailJS incompleta. Variaveis ausentes:', missingConfig);
+      setSubmitStatus('error');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -100,23 +109,25 @@ const ContactPage = () => {
     };
 
     try {
-      // Usamos Promise.all para disparar os dois e-mails simultaneamente
-      await Promise.all([
-        // 2. Email para VOCÊ
-        emailjs.send(
-          EMAILJS_CONFIG.SERVICE_ID,
-          EMAILJS_CONFIG.TEMPLATE_ID_FOR_ME,
-          { ...templateParams, title: `Nova mensagem de: ${formData.name}` },
-          EMAILJS_CONFIG.PUBLIC_KEY
-        ),
-        // 3. Email de confirmação para o CLIENTE (Sender)
-        emailjs.send(
+      // Envio principal (obrigatorio): se falhar, cai no catch.
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID_FOR_ME,
+        { ...templateParams, title: `Nova mensagem de: ${formData.name}` },
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+
+      // Envio de confirmacao para o cliente (opcional): nao bloqueia sucesso do formulario.
+      try {
+        await emailjs.send(
           EMAILJS_CONFIG.SERVICE_ID,
           EMAILJS_CONFIG.TEMPLATE_ID_FOR_SENDER,
-          { ...templateParams, title: "Recebemos sua mensagem!" },
+          { ...templateParams, title: 'Recebemos sua mensagem!' },
           EMAILJS_CONFIG.PUBLIC_KEY
-        )
-      ]);
+        );
+      } catch (senderError) {
+        console.warn('Email de confirmacao nao enviado:', senderError);
+      }
 
       setSubmitStatus("success");
       setFormData({ name: "", email: "", message: "" });

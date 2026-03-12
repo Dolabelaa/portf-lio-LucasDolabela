@@ -7,4 +7,17 @@ const EMAILJS_CONFIG = {
   PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
 };
 
+export const getMissingEmailJsConfig = () => {
+  const requiredFields = [
+    'SERVICE_ID',
+    'TEMPLATE_ID_FOR_ME',
+    'TEMPLATE_ID_FOR_SENDER',
+    'PUBLIC_KEY',
+  ];
+
+  return requiredFields.filter((field) => !EMAILJS_CONFIG[field]);
+};
+
+export const isEmailJsConfigValid = () => getMissingEmailJsConfig().length === 0;
+
 export default EMAILJS_CONFIG;
